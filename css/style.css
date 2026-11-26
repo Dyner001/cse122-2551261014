@@ -1,0 +1,81 @@
+/* ============================================
+   1. BIẾN CSS — Dùng chung toàn trang
+   ============================================ */
+:root {
+  --mau-nen-khung: #FFFDE7;   /* vàng nhạt */
+  --mau-vien: #9E9E9E;        /* xám */
+  --mau-do-dam: #D40000;      /* đỏ đậm */
+  --mau-hong: #FFD9E6;        /* hồng phấn */
+  --mau-xanh: #0033CC;        /* xanh dương */
+}
+
+/* ============================================
+   2. RESET + CĂN GIỮA KHUNG BẰNG FLEXBOX
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* căn giữa ngang */
+  align-items: center;       /* căn giữa dọc */
+  background: #FAFAFA;       /* nền trang xám nhạt */
+  font-family: "Times New Roman", serif;
+}
+
+/* ============================================
+   3. KHUNG BAO BÀI THƠ
+   ============================================ */
+.khung-tho {
+  width: 640px;
+  background: var(--mau-nen-khung);
+  border: 1px solid var(--mau-vien);
+  padding: 24px;
+  text-align: center;
+}
+
+/* ============================================
+   4. TIÊU ĐỀ — DẢI BĂNG HỒNG
+   ============================================ */
+.khung-tho h1 {
+  color: var(--mau-do-dam);
+  background: var(--mau-hong);
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 0;
+  margin: 0 0 20px;
+}
+
+/* ============================================
+   5. KHỔ THƠ — TÁI SỬ DỤNG CLASS
+   ============================================ */
+.kho {
+  font-style: italic;
+  line-height: 1.7;
+  margin: 16px 0;
+}
+
+/* Khổ 1 & 3 — xanh dương */
+.kho.xanh {
+  color: var(--mau-xanh);
+}
+
+/* Khổ 2 — đỏ */
+.kho.do {
+  color: var(--mau-do-dam);
+}
+
+/* ============================================
+   6. ĐƯỜNG KẺ NGANG
+   ============================================ */
+hr {
+  width: 55%;
+  border: none;
+  border-top: 1px solid var(--mau-xanh);
+  margin: 12px auto;
+}
